@@ -1,0 +1,89 @@
+# _config.yml — GitHub Pages (Jekyll) SEO-ready
+
+# --- Site ---
+title: "Coworking Gratte-Ciel — Villeurbanne"
+tagline: "Au cœur des Gratte-Ciel : bureaux, salles & services"
+description: "Espace de coworking à Villeurbanne, quartier des Gratte-Ciel : bureaux flexibles, salles de réunion, café/thé à volonté, accès 24/7, internet haut débit."
+lang: fr
+locale: fr_FR
+url: "https://CHANGE_ME.github.io"   # ex: https://exemple.github.io ou https://mon-domaine.fr
+baseurl: ""                           # laisser vide si le site est à la racine du domaine
+permalink: pretty                     # URLs SEO-friendly: /page/
+
+# --- Build ---
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+timezone: Europe/Paris
+
+# --- Plugins autorisés par GitHub Pages ---
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-include-cache
+
+# --- SEO: jekyll-seo-tag ---
+# Ajoute {% seo %} dans <head> de ton layout (voir note plus bas)
+author:
+  name: "Coworking Gratte-Ciel"
+  url: "https://CHANGE_ME"
+  email: "studio@scopa.co"
+logo: /assets/img/og-logo.png         # image carrée 512x512 min
+image: /assets/img/og-cover.jpg       # image 1200x630 pour l’Open Graph
+social:
+  name: "Coworking Gratte-Ciel"
+  links:
+    - "https://www.linkedin.com/company/scopa-studio/"  # LinkedIn
+    - "mailto:studio@scopa.co"
+
+# --- Defaults: métadonnées & sitemap ---
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: fr
+      sitemap: true
+      layout: default
+  - scope:
+      path: "blog"
+      type: "posts"
+    values:
+      layout: post
+      permalink: /blog/:title/
+
+# --- Sitemap ---
+# jekyll-sitemap utilise automatiquement url + baseurl
+
+# --- Feed (si tu as un blog) ---
+feed:
+  path: feed.xml
+
+# --- Exclusions (non indexables) ---
+exclude:
+  - README.md
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - .github/
+
+# --- Collections (optionnel) ---
+# collections:
+#   offres:
+#     output: true
+#     permalink: /offres/:name/
+
+# --- Navigation (optionnel pour les thèmes) ---
+# nav:
+#   - title: Tarifs
+#     url: /tarifs/
+#   - title: Salles
+#     url: /salles/
+#   - title: Contact
+#     url: /contact/

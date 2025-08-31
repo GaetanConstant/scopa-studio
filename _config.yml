@@ -1,14 +1,14 @@
-# _config.yml — GitHub Pages (Jekyll) SEO-ready
+# _config.yml — GitHub Pages SEO optimisé
 
 # --- Site ---
-title: "Coworking Gratte-Ciel — Villeurbanne"
-tagline: "Au cœur des Gratte-Ciel : bureaux, salles & services"
+title: "SCOPA Studio — Coworking Gratte-Ciel Villeurbanne"
+tagline: "Coworking au cœur des Gratte-Ciel à Villeurbanne"
 description: "Espace de coworking à Villeurbanne, quartier des Gratte-Ciel : bureaux flexibles, salles de réunion, café/thé à volonté, accès 24/7, internet haut débit."
 lang: fr
 locale: fr_FR
-url: "https://CHANGE_ME.github.io"   # ex: https://exemple.github.io ou https://mon-domaine.fr
-baseurl: ""                           # laisser vide si le site est à la racine du domaine
-permalink: pretty                     # URLs SEO-friendly: /page/
+url: "https://studio.scopa.co"       # domaine principal
+baseurl: ""                          # laisser vide si racine du domaine
+permalink: pretty                    # URLs SEO-friendly: /page/
 
 # --- Build ---
 markdown: kramdown
@@ -25,18 +25,17 @@ plugins:
   - jekyll-redirect-from
   - jekyll-include-cache
 
-# --- SEO: jekyll-seo-tag ---
-# Ajoute {% seo %} dans <head> de ton layout (voir note plus bas)
+# --- SEO (jekyll-seo-tag) ---
 author:
-  name: "Coworking Gratte-Ciel"
-  url: "https://CHANGE_ME"
+  name: "SCOPA Studio"
+  url: "https://studio.scopa.co"
   email: "studio@scopa.co"
 logo: /assets/img/og-logo.png         # image carrée 512x512 min
-image: /assets/img/og-cover.jpg       # image 1200x630 pour l’Open Graph
+image: /assets/img/og-cover.jpg       # image 1200x630 pour Open Graph (réseaux sociaux)
 social:
-  name: "Coworking Gratte-Ciel"
+  name: "SCOPA Studio"
   links:
-    - "https://www.linkedin.com/company/scopa-studio/"  # LinkedIn
+    - "https://www.linkedin.com/company/scopa-studio/"
     - "mailto:studio@scopa.co"
 
 # --- Defaults: métadonnées & sitemap ---
@@ -55,13 +54,13 @@ defaults:
       permalink: /blog/:title/
 
 # --- Sitemap ---
-# jekyll-sitemap utilise automatiquement url + baseurl
+# jekyll-sitemap génère automatiquement sitemap.xml basé sur url
 
-# --- Feed (si tu as un blog) ---
+# --- Feed (si blog) ---
 feed:
   path: feed.xml
 
-# --- Exclusions (non indexables) ---
+# --- Exclusions (fichiers non publiés) ---
 exclude:
   - README.md
   - node_modules/
@@ -73,13 +72,13 @@ exclude:
   - scripts/
   - .github/
 
-# --- Collections (optionnel) ---
+# --- Collections (optionnel si besoin) ---
 # collections:
 #   offres:
 #     output: true
 #     permalink: /offres/:name/
 
-# --- Navigation (optionnel pour les thèmes) ---
+# --- Navigation (optionnel si ton thème l'utilise) ---
 # nav:
 #   - title: Tarifs
 #     url: /tarifs/

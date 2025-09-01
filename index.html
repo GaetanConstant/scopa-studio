@@ -4,20 +4,91 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="fr">
 	<head>
-		<title>Scopa Studio - Bureaux partagés à VilleurbanneP</title>
+		<title>Scopa Studio — Coworking & bureaux partagés à Villeurbanne (Gratte‑Ciel)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Espace de coworking chaleureux à Villeurbanne (quartier Gratte‑Ciel) : 8 postes, bureau privatif, salles d’appels & réunion, cuisine, café/thé, internet haut débit, accès 24/7. À partir de 250€ HT/mois." />
+		<link rel="canonical" href="https://studio.scopa.co/" />
+
+		<!-- Open Graph / Twitter -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://studio.scopa.co/">
+		<meta property="og:title" content="Scopa Studio — Coworking & bureaux partagés à Villeurbanne">
+		<meta property="og:description" content="Coworking au cœur de Villeurbanne : postes en open space, bureau privatif, salles, cuisine, café/thé, 24/7.">
+		<meta property="og:image" content="https://studio.scopa.co/images/open-space-entier1.jpg">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Scopa Studio — Coworking & bureaux partagés à Villeurbanne">
+		<meta name="twitter:description" content="Espace de travail douillet, quartier Gratte‑Ciel.">
+		<meta name="twitter:image" content="https://studio.scopa.co/images/open-space-entier1.jpg">
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- Données structurées LocalBusiness / CoworkingSpace (JSON‑LD) -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "CoworkingSpace",
+		  "name": "Scopa Studio",
+		  "url": "https://studio.scopa.co/",
+		  "image": "https://studio.scopa.co/images/open-space-entier1.jpg",
+		  "priceRange": "€€",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "41 rue Paul Verlaine",
+			"addressLocality": "Villeurbanne",
+			"postalCode": "69100",
+			"addressCountry": "FR"
+		  },
+		  "amenityFeature": [
+			{"@type": "LocationFeatureSpecification","name":"Accès 24/7","value":true},
+			{"@type": "LocationFeatureSpecification","name":"Salles d'appels","value":true},
+			{"@type": "LocationFeatureSpecification","name":"Salle de réunion","value":true},
+			{"@type": "LocationFeatureSpecification","name":"Bureau privatif","value":true},
+			{"@type": "LocationFeatureSpecification","name":"Internet haut débit","value":true},
+			{"@type": "LocationFeatureSpecification","name":"Café/Thé","value":true}
+		  ]
+		}
+		</script>
+
+		<!-- FAQ (rich results) -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "FAQPage",
+		  "mainEntity": [
+			{
+			  "@type": "Question",
+			  "name": "Y a‑t‑il un engagement?",
+			  "acceptedAnswer": {"@type": "Answer","text": "Postes au mois sans engagement long. Le bureau privatif se réserve à partir de 3 mois."}
+			},
+			{
+			  "@type": "Question",
+			  "name": "Quels sont les horaires?",
+			  "acceptedAnswer": {"@type": "Answer","text": "Accès 24/7 pour les résidents. Visites sur rendez‑vous du lundi au vendredi."}
+			},
+			{
+			  "@type": "Question",
+			  "name": "Le café/thé est‑il inclus?",
+			  "acceptedAnswer": {"@type": "Answer","text": "Oui, boissons chaudes à volonté dans la cuisine commune."}
+			},
+			{
+			  "@type": "Question",
+			  "name": "Comment venir?",
+			  "acceptedAnswer": {"@type": "Answer","text": "Tram T6 Verlaine à 2 minutes, métro A Gratte‑Ciel à 8 minutes à pied."}
+			}
+		  ]
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
-				<!-- One -->
+				<!-- One (Hero) -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Bureaux partagés</h1>
@@ -27,7 +98,7 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/open-space-entier1.jpg" alt="" />
+							<img src="images/open-space-entier1.jpg" alt="Open space lumineux de Scopa Studio à Villeurbanne, postes de travail et coin détente" />
 						</div>
 					</section>
 
@@ -42,7 +113,7 @@
 
 						</div>
 						<div class="image">
-							<img src="images/bureau-privatif1.jpg" alt="" />
+							<img src="images/bureau-privatif1.jpg" alt="Bureau privatif Scopa Studio pour 1 à 4 personnes" loading="lazy" />
 						</div>
 					</section>
 
@@ -59,39 +130,39 @@
 							<div class="gallery style2 medium lightbox onscroll-fade-in">
 								<article>
 									<a href="images/tramt6verlaine.webp" class="image">
-										<img src="images/tramt6verlaine.webp" alt="" />
+										<img src="images/tramt6verlaine.webp" alt="Tram T6 Verlaine à proximité de Scopa Studio" loading="lazy" />
 									</a>
 
 								</article>
 								<article>
 									<a href="images/bettant.jpg" class="image">
-										<img src="images/bettant.jpg" alt="" />
+										<img src="images/bettant.jpg" alt="Boulangerie Bettant — quartier Gratte‑Ciel, Villeurbanne" loading="lazy" />
 									</a>
 
 								</article>
 								<article>
 									<a href="images/gratteciel2.jpg" class="image">
-										<img src="images/gratteciel2.jpg" alt="" />
+										<img src="images/gratteciel2.jpg" alt="Gratte‑Ciel — centre de Villeurbanne" loading="lazy" />
 									</a>
 								</article>
 								<article>
 									<a href="images/barbusse.jpg" class="image">
-										<img src="images/barbusse.jpg" alt="" />
+										<img src="images/barbusse.jpg" alt="Rue Henri Barbusse — artère commerçante près de Scopa Studio" loading="lazy" />
 									</a>
 								</article>
 								<article>
 									<a href="images/gratteciel.jpg" class="image">
-										<img src="images/gratteciel.jpg" alt="" />
+										<img src="images/gratteciel.jpg" alt="Quartier des Gratte‑Ciel à Villeurbanne" loading="lazy" />
 									</a>
 								</article>
 								<article>
 									<a href="images/carbone.jpg" class="image">
-										<img src="images/carbone.jpg" alt="" />
+										<img src="images/carbone.jpg" alt="Restaurant Le Cœur — Carbone, voisin de Scopa Studio" loading="lazy" />
 									</a>
 								</article>
 								<article>
 									<a href="images/tnp.jpg" class="image">
-										<img src="images/tnp.jpg" alt="" />
+										<img src="images/tnp.jpg" alt="TNP Villeurbanne — théâtre à proximité" loading="lazy" />
 									</a>
 								</article>
 
@@ -145,7 +216,7 @@
 						</div>
 					</section>
 
-				<!-- Six -->
+				<!-- Six (tarifs) -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
 							<h2>Nos tarifs</h2>

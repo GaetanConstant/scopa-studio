@@ -1,6 +1,4 @@
-<!-- robots.txt -->
-# Place ce contenu dans un fichier nommé "robots.txt" à la racine du repo
-# (même niveau que index.html)
 User-agent: *
 Allow: /
+
 Sitemap: https://studio.scopa.co/sitemap.xml

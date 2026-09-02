@@ -52,7 +52,7 @@ export const content = {
     contact: {
         title: "Nous contacter",
         address: ["41 rue Paul Verlaine,", "69100 Villeurbanne"],
-        email: "contact@scopa-studio.fr",
+        email: "studio@scopa.co",
         design: "SCOPA",
         linkedin: "https://www.linkedin.com/company/scopa-studio/",
         website: "https://scopa.co/"

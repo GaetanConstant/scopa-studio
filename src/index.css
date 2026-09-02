@@ -210,8 +210,8 @@ img {
 .review-card__text {
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 7;
-  line-clamp: 7;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -255,7 +255,7 @@ img {
   }
 
   .section {
-    padding: var(--spacing-xl) 0;
+    padding: 5rem 0;
   }
 
   .display-1 {

@@ -17,15 +17,13 @@ export default function OriginalTheme() {
     return (
         <div className="theme-original">
             {/* Navigation */}
-            <nav style={{ padding: '2rem 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 'bold', fontFamily: 'var(--font-heading)' }}>
-                    SCOPA STUDIO
-                </div>
-                <div>
-                    <a href="#concept" style={{ margin: '0 1rem' }}>Le Concept</a>
-                    <a href="#services" style={{ margin: '0 1rem' }}>Services</a>
-                    <a href="#tarifs" style={{ margin: '0 1rem' }}>Tarifs</a>
-                    <a href="#contact" className="btn btn-primary" style={{ marginLeft: '1rem', padding: '8px 16px' }}>Contact</a>
+            <nav className="site-nav">
+                <div className="site-nav__brand">SCOPA STUDIO</div>
+                <div className="site-nav__links">
+                    <a href="#concept">Le Concept</a>
+                    <a href="#services">Services</a>
+                    <a href="#tarifs">Tarifs</a>
+                    <a href="#contact" className="btn btn-primary">Contact</a>
                 </div>
             </nav>
 
@@ -33,8 +31,7 @@ export default function OriginalTheme() {
             <header className="hero section" style={{
                 backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.8)), url(${base}images/${hero.image})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundAttachment: 'fixed'
+                backgroundPosition: 'center'
             }}>
                 <div className="container animate-fade-in">
                     <p style={{ textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem', marginBottom: '1rem', color: 'var(--color-primary)' }}>
@@ -150,7 +147,7 @@ export default function OriginalTheme() {
             </section>
 
             {/* Footer / Contact */}
-            <footer id="contact" className="section" style={{ background: 'var(--color-secondary)', color: 'white', padding: '1.5rem 0' }}>
+            <footer id="contact" className="section site-footer" style={{ background: 'var(--color-secondary)', color: 'white', padding: '1.5rem 0' }}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
                         <p style={{ margin: 0, fontSize: '1rem' }}>

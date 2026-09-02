@@ -79,7 +79,7 @@ img {
 }
 
 .section {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-lg) 0;
 }
 
 .btn {
@@ -106,6 +106,48 @@ img {
   background-color: #c06040;
 }
 
+/* Navigation */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  padding: 1.25rem 5%;
+}
+
+.site-nav__brand {
+  flex: 0 0 100%;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.site-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 0.75rem;
+}
+
+/* Cibles tactiles d'au moins 44px, recommandation Apple et Google */
+.site-nav__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.25rem;
+}
+
+.site-footer a,
+.site-footer button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 /* Grid System */
 .grid {
   display: grid;
@@ -128,17 +170,48 @@ img {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .display-1 {
+    font-size: 3.5rem;
+  }
+
+  .heading-2 {
+    font-size: 2.5rem;
+  }
+
+  .site-nav {
+    justify-content: space-between;
+    padding: 2rem 5%;
+  }
+
+  .site-nav__brand {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+  }
+
+  .site-nav__links {
+    gap: 0 2rem;
+  }
+
+  /* Parallaxe réservée au desktop : iOS Safari rend mal background-attachment */
+  .hero {
+    background-attachment: fixed;
+  }
 }
 
 /* Typo Scale */
 .display-1 {
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
 }
 
 .heading-2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   margin-bottom: var(--spacing-md);
 }
 

@@ -64,12 +64,42 @@ export function PricingCard({ title, price, subtitle, desc, highlight, className
             <div style={{ color: '#888', marginBottom: '1.5rem', fontSize: '0.9rem' }}>{subtitle}</div>
             <p style={{ marginBottom: 'auto' }}>{desc}</p>
             <a
-                href={`mailto:contact@scopa.co?subject=Demande de disponibilité - Formule ${title}&body=Bonjour,%0D%0A%0D%0AJe suis intéressé(e) par la formule ${title} pour les dates suivantes : %0D%0A%0D%0ANom : %0D%0APrénom : %0D%0AEntreprise (si applicable) : %0D%0ATéléphone : %0D%0A%0D%0AMerci.`}
+                href={`mailto:studio@scopa.co?subject=Demande de disponibilité - Formule ${title}&body=Bonjour,%0D%0A%0D%0AJe suis intéressé(e) par la formule ${title} pour les dates suivantes : %0D%0A%0D%0ANom : %0D%0APrénom : %0D%0AEntreprise (si applicable) : %0D%0ATéléphone : %0D%0A%0D%0AMerci.`}
                 className={`btn ${highlight ? 'btn-primary' : ''}`}
                 style={{ marginTop: '2rem', width: '100%', textAlign: 'center', background: highlight ? '' : '#eee', color: highlight ? '' : '#333', textDecoration: 'none', display: 'block' }}
             >
                 Choisir
             </a>
+        </div>
+    );
+}
+
+// Review Card
+const AVATAR_COLORS = ['#E63946', '#2C3E50', '#4E8098', '#C1666B', '#5C8001'];
+
+export function ReviewCard({ author, rating, date, text, index = 0 }) {
+    const initials = author
+        .split(' ')
+        .map(part => part[0])
+        .slice(0, 2)
+        .join('')
+        .toUpperCase();
+
+    return (
+        <div className="review-card">
+            <div className="review-card__head">
+                <div className="review-card__avatar" style={{ background: AVATAR_COLORS[index % AVATAR_COLORS.length] }}>
+                    {initials}
+                </div>
+                <div>
+                    <div className="review-card__author">{author}</div>
+                    <div className="review-card__date">{date}</div>
+                </div>
+            </div>
+            <div className="review-card__stars" aria-label={`${rating} sur 5`}>
+                {'★'.repeat(rating)}{'☆'.repeat(5 - rating)}
+            </div>
+            <p className="review-card__text">{text}</p>
         </div>
     );
 }

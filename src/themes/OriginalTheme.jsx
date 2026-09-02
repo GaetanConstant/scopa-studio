@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
 import { content } from '../data';
-import { LocationCard, ServiceCard, PricingCard } from '../components/Cards';
+import { LocationCard, ServiceCard, PricingCard, ReviewCard } from '../components/Cards';
 
 export default function OriginalTheme() {
-    const { hero, concept, location, services, pricing, contact } = content;
+    const { hero, concept, reviews, location, services, pricing, contact } = content;
     const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
     // State for Lightbox and Legal Modal
@@ -76,6 +76,28 @@ export default function OriginalTheme() {
                                 onClick={() => openLightbox(concept.mainImage)}
                             />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Reviews Section */}
+            <section id="avis" className="section" style={{ background: 'var(--color-surface-hover)' }}>
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '2rem' }}>
+                        <h2 className="heading-2" style={{ marginBottom: '0.5rem' }}>{reviews.title}</h2>
+                        <p style={{ color: '#777' }}>{reviews.source}</p>
+                    </div>
+
+                    <div className="reviews-strip">
+                        {reviews.items.map((review, i) => (
+                            <ReviewCard key={i} {...review} index={i} />
+                        ))}
+                    </div>
+
+                    <div className="text-center" style={{ marginTop: '2rem' }}>
+                        <a href={reviews.linkUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                            {reviews.linkLabel}
+                        </a>
                     </div>
                 </div>
             </section>

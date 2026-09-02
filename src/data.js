@@ -47,7 +47,13 @@ export const content = {
             { title: "Standard", price: "300€", subtitle: "HT / mois / poste", desc: "Sans engagement. Formule idéale pour s’installer sereinement. Accès complet à tous les services." },
             { title: "Engagé", price: "250€", subtitle: "HT / mois / poste", desc: "Engagement de 6 mois. Tarif préférentiel pour celles et ceux qui souhaitent s’ancrer dans la durée.", highlight: true },
             { title: "Bureau Privatif", price: "800€", subtitle: "HT / mois", desc: "L'espace vous appartient totalement, possibilité de travailler à 4 dedans. Idéal pour les jeunes structures." }
-        ]
+        ],
+        note: {
+            title: "Des tarifs qui s'adaptent à votre situation",
+            description: "Le tarif standard de **300€ HT par mois et par poste** est un point de départ, pas une grille figée. Il évolue selon le **nombre de postes** que vous réservez et le **nombre de mois** sur lesquels vous vous engagez.",
+            highlight: "Chez SCOPA Studio, on préfère en discuter : parlons de votre besoin, et trouvons ensemble la meilleure manière de collaborer.",
+            cta: "Discutons-en"
+        }
     },
     contact: {
         title: "Nous contacter",

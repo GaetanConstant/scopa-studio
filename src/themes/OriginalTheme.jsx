@@ -84,7 +84,12 @@ export default function OriginalTheme() {
             <section id="avis" className="section" style={{ background: 'var(--color-surface-hover)' }}>
                 <div className="container">
                     <div className="text-center" style={{ marginBottom: '2rem' }}>
-                        <h2 className="heading-2" style={{ marginBottom: '0.5rem' }}>{reviews.title}</h2>
+                        <h2 className="heading-2" style={{ marginBottom: '0.75rem' }}>{reviews.title}</h2>
+                        <div className="reviews-rating">
+                            <span className="reviews-rating__score">{reviews.average}</span>
+                            <span className="review-card__stars" aria-hidden="true">★★★★★</span>
+                            <span style={{ color: '#777' }}>· {reviews.count} avis</span>
+                        </div>
                         <p style={{ color: '#777' }}>{reviews.source}</p>
                     </div>
 

@@ -17,9 +17,12 @@ export const content = {
     reviews: {
         title: "Ce qu'en disent nos coworkers",
         source: "Avis publiés sur Google",
+        average: "5,0",
+        count: 8,
         linkLabel: "Voir tous les avis sur Google",
-        linkUrl: "https://www.google.com/maps/search/?api=1&query=SCOPA+Studio+Villeurbanne",
+        linkUrl: "https://share.google/HvULkIi5KIrd7D1C9",
         items: [
+            { author: "Yassir Ennazk", rating: 5, date: "il y a un jour", text: "J’ai passé aujourd’hui ma toute première journée dans cet espace de coworking et l’expérience a été vraiment excellente. L’endroit est très calme, extrêmement propre et aménagé de façon très moderne et élégante. Tout est pensé pour pouvoir travailler confortablement et dans de très bonnes conditions. Le café est disponible, ce qui est toujours très appréciable pendant une journée de travail, et surtout, les personnes sur place sont très accueillantes, sympathiques et bienveillantes. Je suis vraiment très satisfait de cette première journée et ravi d’avoir découvert cet endroit. J’ai déjà hâte d’y passer encore de nombreuses heures à travailler. Je recommande vivement !" },
             { author: "Enzo Leonard", rating: 5, date: "il y a 10 mois", text: "Franchement top, bien placé, les locaux sont neufs et l'hôte est top ! Je recommande !" },
             { author: "Anthony Dejour", rating: 5, date: "il y a 10 mois", text: "Lieux au calme et chaleureux pour travailler sereinement ! Je recommande 😊" },
             { author: "Nicolas Morlot", rating: 5, date: "il y a 10 mois", text: "Co-work bien placé. Parfait pour travailler et pour réseauter" },

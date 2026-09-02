@@ -14,6 +14,19 @@ export const content = {
         images: ["bureau-privatif2.jpg", "open-space-gauche3.jpg", "open-space-gauche2.jpg"],
         mainImage: "open-space-gauche1.jpg"
     },
+    reviews: {
+        title: "Ce qu'en disent nos coworkers",
+        source: "Avis publiés sur Google",
+        linkLabel: "Voir tous les avis sur Google",
+        linkUrl: "https://www.google.com/maps/search/?api=1&query=SCOPA+Studio+Villeurbanne",
+        items: [
+            { author: "Enzo Leonard", rating: 5, date: "il y a 10 mois", text: "Franchement top, bien placé, les locaux sont neufs et l'hôte est top ! Je recommande !" },
+            { author: "Anthony Dejour", rating: 5, date: "il y a 10 mois", text: "Lieux au calme et chaleureux pour travailler sereinement ! Je recommande 😊" },
+            { author: "Nicolas Morlot", rating: 5, date: "il y a 10 mois", text: "Co-work bien placé. Parfait pour travailler et pour réseauter" },
+            { author: "Benjamin Schaal", rating: 5, date: "il y a 11 mois", text: "L'hôte est au top ! 🦜" },
+            { author: "Clément Sabouraud", rating: 5, date: "il y a 11 mois", text: "La peinture est bien faite et les chaises sont neuves" }
+        ]
+    },
     location: {
         title: "Une vie de quartier animée à Villeurbanne",
         description: "Notre espace de coworking vous place à deux pas des commerces, cafés, librairies et services du quotidien. Vous bénéficiez d’un environnement vivant et central au cœur de Gratte-Ciel — parfait pour stimuler votre créativité.",

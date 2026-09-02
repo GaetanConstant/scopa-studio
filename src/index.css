@@ -231,6 +231,22 @@ img {
   line-height: 1;
 }
 
+/* Les 9 lieux du quartier défilent horizontalement sous 768px :
+   empilés, ils imposaient un très long scroll sur mobile. */
+.location-strip {
+  display: flex;
+  gap: var(--spacing-sm);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-sm);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.location-strip > * {
+  flex: 0 0 min(280px, 78%);
+  scroll-snap-align: start;
+}
+
 /* Grid System */
 .grid {
   display: grid;
@@ -252,6 +268,14 @@ img {
 
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .location-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    overflow-x: visible;
+    padding-bottom: 0;
   }
 
   .section {

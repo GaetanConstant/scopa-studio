@@ -117,7 +117,7 @@ export default function OriginalTheme() {
                         </p>
                     </div>
 
-                    <div className="grid grid-3">
+                    <div className="location-strip">
                         {location.items.map((item, i) => (
                             <LocationCard key={i} {...item} />
                         ))}

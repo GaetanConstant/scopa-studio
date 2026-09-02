@@ -126,6 +126,26 @@ export default function OriginalTheme() {
                             <PricingCard key={i} {...item} />
                         ))}
                     </div>
+
+                    <div style={{
+                        marginTop: '3rem',
+                        padding: '2.5rem',
+                        background: 'var(--color-surface-hover)',
+                        border: '1px solid var(--color-border)',
+                        borderRadius: 'var(--radius-lg)',
+                        textAlign: 'center',
+                        maxWidth: '760px',
+                        marginLeft: 'auto',
+                        marginRight: 'auto'
+                    }}>
+                        <h3 className="heading-3" style={{ marginBottom: '1rem' }}>{pricing.note.title}</h3>
+                        <p
+                            style={{ marginBottom: '1rem' }}
+                            dangerouslySetInnerHTML={{ __html: pricing.note.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+                        />
+                        <p style={{ marginBottom: '2rem' }}>{pricing.note.highlight}</p>
+                        <a href={`mailto:${contact.email}`} className="btn btn-primary">{pricing.note.cta}</a>
+                    </div>
                 </div>
             </section>
 

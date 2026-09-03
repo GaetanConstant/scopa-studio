@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .bg { fill: #FDFBF7; }
+      .accent { fill: #E63946; }
+      .dark { fill: #1A1A1A; }
+      .title { font-family: 'Outfit', Arial, sans-serif; font-size: 72px; font-weight: 700; }
+      .subtitle { font-family: 'Inter', Arial, sans-serif; font-size: 36px; font-weight: 400; color: #666; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="630"/>
+
+  <!-- Accent bar -->
+  <rect class="accent" x="0" y="0" width="8" height="630"/>
+
+  <!-- Content -->
+  <text x="100" y="200" class="title dark">Intranet</text>
+  <text x="100" y="280" class="subtitle">SCOPA Studio</text>
+
+  <!-- Decorative elements -->
+  <circle cx="1100" cy="100" r="60" class="accent" opacity="0.2"/>
+  <circle cx="150" cy="550" r="45" class="accent" opacity="0.15"/>
+</svg>

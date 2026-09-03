@@ -500,15 +500,16 @@
 }
 
 .itr-creneau-bloque {
-  background: var(--color-border) !important;
-  color: var(--color-border) !important;
+  background: rgba(0, 0, 0, 0.08) !important;
+  color: rgba(0, 0, 0, 0.3) !important;
   cursor: not-allowed !important;
+  opacity: 0.6 !important;
 }
 
 .itr-creneau-bloque:hover,
 .itr-creneau-bloque:focus-visible {
-  background: var(--color-border) !important;
-  color: var(--color-border) !important;
+  background: rgba(0, 0, 0, 0.08) !important;
+  color: rgba(0, 0, 0, 0.3) !important;
 }
 
 .itr-reservation {

@@ -53,6 +53,15 @@ export const FERMETURE = 20
 // Sans type, la valeur est affichee telle quelle.
 export const AREMPLIR = 'à compléter'
 
+// Fiches pré-remplies pour les membres de SCOPA. Chacun peut modifier ses infos
+// depuis l'onglet Annuaire. Les fiches non listées ici partent vides.
+export const FICHES_INITIALES = {
+  alison: { fonction: 'Formatrice Data IA', tel: '06 88 65 65 69', email: '' },
+  gaetan: { fonction: 'Developpeur Data IA', tel: '06 98 21 09 27', email: '' },
+  orkun: { fonction: 'Developpeur Data IA', tel: '', email: '' },
+  js: { fonction: 'Apprenti Developpeur Data IA', tel: '', email: '' },
+}
+
 export const INFOS = [
   {
     titre: 'Accès au studio',
@@ -73,9 +82,8 @@ export const INFOS = [
     titre: 'Contacts',
     entrees: [
       { cle: 'Email du studio', valeur: 'studio@scopa.co', type: 'email' },
-      { cle: 'Gestionnaire', valeur: 'Gaëtan' },
-      // Renseigner `numero` pour rendre l'urgence appelable en un clic.
-      { cle: 'Urgence', valeur: 'Alison', type: 'tel', numero: AREMPLIR },
+      { cle: 'Gestionnaire', valeur: 'Gaëtan', type: 'tel', numero: '0698210927' },
+      { cle: 'Urgence', valeur: 'Alison', type: 'tel', numero: '0688656569' },
     ],
   },
 ]

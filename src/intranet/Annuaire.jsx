@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MEMBRES, formaterNom } from './data'
+import { MEMBRES, formaterNom, FICHES_INITIALES } from './data'
 import { listerFiches, enregistrerFiche } from './api'
 
 const initiales = (nom) =>
@@ -39,7 +39,7 @@ export default function Annuaire({ moi }) {
     }
   }, [version])
 
-  const maFiche = { ...VIDE, ...(fiches[moi] ?? {}) }
+  const maFiche = { ...VIDE, ...(FICHES_INITIALES[moi] ?? {}), ...(fiches[moi] ?? {}) }
   // Le prenom saisi a la connexion est libre : s'il ne figure pas dans la
   // liste du studio, on affiche quand meme sa carte pour qu'il puisse se
   // presenter aux autres.
@@ -52,8 +52,7 @@ export default function Annuaire({ moi }) {
     <section className="itr-annuaire">
       <div className="itr-barre-annuaire">
         <p className="itr-intro">
-          Les {listeAffichee.length} locataires du studio. Chacun remplit sa propre fiche — tous les champs
-          sont facultatifs.
+          Chacun remplit sa fiche — tous les champs sont facultatifs.
         </p>
         <button className="itr-btn itr-btn-primaire" onClick={() => setEdition(true)}>
           {complete ? 'Modifier ma fiche' : 'Compléter ma fiche'}
@@ -75,7 +74,7 @@ export default function Annuaire({ moi }) {
 
       <ul className="itr-grille-membres">
         {listeAffichee.map((m) => {
-          const fiche = { ...VIDE, ...(fiches[m.nom] ?? {}) }
+          const fiche = { ...VIDE, ...(FICHES_INITIALES[m.nom] ?? {}), ...(fiches[m.nom] ?? {}) }
           const estMoi = m.nom === moi
           return (
             <li className={`itr-membre ${estMoi ? 'itr-membre-moi' : ''}`} key={m.nom}>

@@ -5,8 +5,7 @@ export default function Infos() {
   return (
     <section className="itr-infos">
       <p className="itr-intro">
-        Tout ce qu’il faut savoir pour vivre au studio. Une information manquante ou erronée ?
-        Signalez-la à <a href="mailto:studio@scopa.co">studio@scopa.co</a>.
+        Info manquante ou fausse ? <a href="mailto:studio@scopa.co">Contactez-nous</a>.
       </p>
       <div className="itr-grille-infos">
         {INFOS.map((bloc) => (

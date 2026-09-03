@@ -12,7 +12,7 @@ ENV UV_LINK_MODE=copy \
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev
 
-COPY main.py ./
+COPY main.py fiches_initiales.json ./
 
 # La base vit dans un volume, pas dans l'image.
 ENV STUDIO_DB=/data/intranet.db

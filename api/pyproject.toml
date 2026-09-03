@@ -1,0 +1,16 @@
+[project]
+name = "scopa-studio-api"
+version = "0.1.0"
+description = "API de l'intranet locataires de SCOPA Studio (réservations de salles et annuaire)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+]
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+package = false

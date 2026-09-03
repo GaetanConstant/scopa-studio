@@ -499,6 +499,18 @@
   color: var(--color-primary);
 }
 
+.itr-creneau-bloque {
+  background: var(--color-border) !important;
+  color: var(--color-border) !important;
+  cursor: not-allowed !important;
+}
+
+.itr-creneau-bloque:hover,
+.itr-creneau-bloque:focus-visible {
+  background: var(--color-border) !important;
+  color: var(--color-border) !important;
+}
+
 .itr-reservation {
   position: absolute;
   left: 0.3rem;

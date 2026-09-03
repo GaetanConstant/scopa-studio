@@ -166,17 +166,21 @@ export default function Reservations({ moi }) {
                 <span>{salle.capacite}</span>
               </div>
               <div className="itr-grille" style={{ height: `calc(${heures.length} * var(--h))` }}>
-                {heures.map((h) => (
-                  <button
-                    key={h}
-                    className="itr-creneau-libre"
-                    style={{ top: `calc(${h - OUVERTURE} * var(--h))` }}
-                    onClick={() => setCreation({ salle: salle.id, debut: h })}
-                    aria-label={`Réserver ${salle.nom} à ${libelleHeure(h)}`}
-                  >
-                    <span>+ Réserver</span>
-                  </button>
-                ))}
+                {heures.map((h) => {
+                  const peutReserver = libre(salle.id, h, h + 1)
+                  return (
+                    <button
+                      key={h}
+                      className={`itr-creneau-libre ${peutReserver ? '' : 'itr-creneau-bloque'}`}
+                      style={{ top: `calc(${h - OUVERTURE} * var(--h))` }}
+                      onClick={() => peutReserver && setCreation({ salle: salle.id, debut: h })}
+                      disabled={!peutReserver}
+                      aria-label={`Réserver ${salle.nom} à ${libelleHeure(h)}`}
+                    >
+                      <span>+ Réserver</span>
+                    </button>
+                  )
+                })}
 
                 {reservations
                   .filter((r) => r.salle === salle.id)

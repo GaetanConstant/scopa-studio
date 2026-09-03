@@ -1,0 +1,22 @@
+{
+  "alison": {
+    "fonction": "Formatrice Data IA",
+    "tel": "06 88 65 65 69",
+    "email": ""
+  },
+  "gaetan": {
+    "fonction": "Developpeur Data IA",
+    "tel": "06 98 21 09 27",
+    "email": ""
+  },
+  "orkun": {
+    "fonction": "Developpeur Data IA",
+    "tel": "",
+    "email": ""
+  },
+  "js": {
+    "fonction": "Apprenti Developpeur Data IA",
+    "tel": "",
+    "email": ""
+  }
+}

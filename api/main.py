@@ -116,6 +116,21 @@ def initialiser() -> None:
                 (uuid.uuid4().hex,),
             )
             logger.info("Réservation initiale insérée (isabel, 16/09/2026).")
+        # Fiches initiales : versionnées dans le repo, chargées au démarrage.
+        # On ne les insère que si la table est vide, pour ne pas écraser les
+        # modifs des locataires.
+        fiches_vides = cx.execute("SELECT COUNT(*) FROM fiches").fetchone()[0] == 0
+        if fiches_vides:
+            chemin_fiches = Path(__file__).parent / "fiches_initiales.json"
+            if chemin_fiches.exists():
+                fiches = json.loads(chemin_fiches.read_text())
+                for nom, data in fiches.items():
+                    cx.execute(
+                        "INSERT INTO fiches (nom, fonction, tel, email)"
+                        " VALUES (?, ?, ?, ?)",
+                        (nom, data["fonction"], data["tel"], data["email"]),
+                    )
+                logger.info("Fiches initiales chargées (%d membres).", len(fiches))
     logger.info("Base prête : %s", CHEMIN_DB)
 
 

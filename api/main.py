@@ -208,12 +208,16 @@ class NouvelleReservation(BaseModel):
     @classmethod
     def creneau_coherent(cls, fin: float, infos) -> float:
         debut = infos.data.get("debut")
+        salle = infos.data.get("salle")
         if debut is None:
             return fin
         if fin <= debut:
             raise ValueError("La fin doit être après le début.")
         if debut < OUVERTURE or fin > FERMETURE:
             raise ValueError(f"Le studio est ouvert de {OUVERTURE:.0f}h à {FERMETURE:.0f}h.")
+        # La salle à manger n'est pas réservable de 12h à 14h
+        if salle == "manger" and debut < 14 and fin > 12:
+            raise ValueError("La salle à manger n'est pas réservable entre 12h et 14h.")
         return fin
 
 

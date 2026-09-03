@@ -89,8 +89,13 @@ export default function Reservations({ moi }) {
   const heures = []
   for (let h = OUVERTURE; h < FERMETURE; h++) heures.push(h)
 
-  const libre = (salle, debut, fin) =>
-    !reservations.some((r) => r.salle === salle && debut < r.fin && fin > r.debut)
+  const libre = (salle, debut, fin) => {
+    // La salle à manger n'est pas réservable de 12h à 14h (déjeuner)
+    const estManger = salle === 'manger'
+    const chevauche1214 = estManger && debut < 14 && fin > 12
+    if (chevauche1214) return false
+    return !reservations.some((r) => r.salle === salle && debut < r.fin && fin > r.debut)
+  }
 
   async function annuler(r) {
     if (!window.confirm(`Annuler la réservation de ${libelleHeure(r.debut)} à ${libelleHeure(r.fin)} ?`)) return

@@ -4,7 +4,7 @@ import { content } from '../data';
 import { LocationCard, ServiceCard, PricingCard, ReviewCard } from '../components/Cards';
 
 export default function OriginalTheme() {
-    const { hero, concept, reviews, location, services, pricing, contact } = content;
+    const { hero, concept, reviews, location, services, meetingRoom, pricing, faq, contact } = content;
     const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
     // State for Lightbox and Legal Modal
@@ -23,6 +23,8 @@ export default function OriginalTheme() {
                     <a href="#concept">Le Concept</a>
                     <a href="#services">Services</a>
                     <a href="#tarifs">Tarifs</a>
+                    <a href="#salle-reunion">Salle de réunion</a>
+                    <a href="#faq">FAQ</a>
                     <a href="#contact" className="btn btn-primary">Contact</a>
                 </div>
             </nav>
@@ -62,6 +64,8 @@ export default function OriginalTheme() {
                                         key={i}
                                         src={`${base}images/${img}`}
                                         alt={`Espace coworking Scopa Studio - vue ${i + 1}`}
+                                        loading="lazy"
+                                        decoding="async"
                                         style={{ width: '150px', height: '100px', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }}
                                         onClick={() => openLightbox(img)}
                                     />
@@ -72,6 +76,8 @@ export default function OriginalTheme() {
                             <img
                                 src={`${base}images/${concept.mainImage}`}
                                 alt="Espace principal coworking Villeurbanne"
+                                loading="lazy"
+                                decoding="async"
                                 style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '24px', boxShadow: 'var(--shadow-md)', cursor: 'pointer' }}
                                 onClick={() => openLightbox(concept.mainImage)}
                             />
@@ -169,6 +175,73 @@ export default function OriginalTheme() {
                         />
                         <p style={{ marginBottom: '2rem' }}>{pricing.note.highlight}</p>
                         <a href={`mailto:${contact.email}`} className="btn btn-primary">{pricing.note.cta}</a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Meeting Room Section */}
+            <section id="salle-reunion" className="section meeting-room">
+                <div className="container">
+                    <div className="grid grid-2" style={{ alignItems: 'center' }}>
+                        <div>
+                            <img
+                                src={`${base}images/${meetingRoom.mainImage}`}
+                                alt="Salle de réunion 8 personnes à louer - Scopa Studio Villeurbanne"
+                                loading="lazy"
+                                style={{ width: '100%', height: '420px', objectFit: 'cover', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', cursor: 'pointer' }}
+                                onClick={() => openLightbox(meetingRoom.mainImage)}
+                            />
+                        </div>
+
+                        <div>
+                            <p style={{ textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem', marginBottom: '0.75rem', color: 'var(--color-primary)' }}>
+                                {meetingRoom.subtitle}
+                            </p>
+                            <h2 className="heading-2">{meetingRoom.title}</h2>
+                            <p className="text-lead" style={{ marginBottom: '1.5rem' }}>{meetingRoom.description}</p>
+
+                            <div className="meeting-room__price">
+                                <span className="meeting-room__price-amount">{meetingRoom.price}</span>
+                                <span className="meeting-room__price-unit">{meetingRoom.priceUnit}</span>
+                            </div>
+                            <p style={{ color: '#777', fontSize: '0.9rem', marginBottom: '1.5rem' }}>{meetingRoom.priceNote}</p>
+
+                            <ul className="meeting-room__features">
+                                {meetingRoom.features.map((feature, i) => (
+                                    <li key={i}>
+                                        <span aria-hidden="true">{feature.icon}</span>
+                                        {feature.label}
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <a
+                                href={`mailto:${contact.email}?subject=Réservation salle de réunion - Scopa Studio&body=Bonjour,%0D%0A%0D%0AJe souhaite réserver la salle de réunion (8 personnes, 100€ HT la demi-journée).%0D%0A%0D%0ADate souhaitée : %0D%0ACréneau (matin / après-midi) : %0D%0ANombre de participants : %0D%0A%0D%0ANom : %0D%0AEntreprise : %0D%0ATéléphone : %0D%0A%0D%0AMerci.`}
+                                className="btn btn-primary"
+                                style={{ marginTop: '2rem' }}
+                            >
+                                {meetingRoom.cta}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section id="faq" className="section faq">
+                <div className="container">
+                    <div className="text-center" style={{ marginBottom: '3rem' }}>
+                        <h2 className="heading-2">{faq.title}</h2>
+                        <p>{faq.description}</p>
+                    </div>
+
+                    <div className="faq__list">
+                        {faq.items.map((item, i) => (
+                            <details key={i} className="faq__item">
+                                <summary className="faq__question">{item.q}</summary>
+                                <p className="faq__answer">{item.a}</p>
+                            </details>
+                        ))}
                     </div>
                 </div>
             </section>

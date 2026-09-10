@@ -5,14 +5,14 @@ export const content = {
         subtitle: "Au cœur de Villeurbanne",
         description: "Situé dans le quartier dynamique de Gratte-Ciel, Scopa Studio est l’espace de travail douillet pensé pour le confort et la réussite de ses co-workers.",
         cta: "Voir les disponibilités",
-        image: "open-space-entier1.jpg"
+        image: "open-space-entier1.webp"
     },
     concept: {
         title: "Le coworking coopératif à Villeurbanne",
         description: "Seul ou en équipe, dans l’espace partagé ou en bureau privé, en passant par la cuisine et la salle de réunion, vous trouverez tout ce dont vous avez besoin pour travailler efficacement dans une ambiance conviviale.",
         highlight: "Au total, ce sont **8 postes de travail coworking** qui sont disponibles.",
-        images: ["bureau-privatif2.jpg", "open-space-gauche3.jpg", "open-space-gauche2.jpg"],
-        mainImage: "open-space-gauche1.jpg"
+        images: ["bureau-privatif2.webp", "open-space-gauche3.webp", "open-space-gauche2.webp"],
+        mainImage: "open-space-gauche1.webp"
     },
     reviews: {
         title: "Ce qu'en disent nos coworkers",
@@ -34,14 +34,14 @@ export const content = {
         title: "Une vie de quartier animée à Villeurbanne",
         description: "Notre espace de coworking vous place à deux pas des commerces, cafés, librairies et services du quotidien. Vous bénéficiez d’un environnement vivant et central au cœur de Gratte-Ciel — parfait pour stimuler votre créativité.",
         items: [
-            { img: "gratteciel.jpg", title: "Quartier Gratte-Ciel" },
-            { img: "tnp.jpg", title: "Théâtre National Populaire" },
-            { img: "barbusse.jpg", title: "Avenue Henri Barbusse" },
-            { img: "filanthrope.jpg", title: "Le Bistrot Filanthrope" },
+            { img: "gratteciel.webp", title: "Quartier Gratte-Ciel" },
+            { img: "tnp.webp", title: "Théâtre National Populaire" },
+            { img: "barbusse.webp", title: "Avenue Henri Barbusse" },
+            { img: "filanthrope.webp", title: "Le Bistrot Filanthrope" },
             { img: "pralus.webp", title: "Boutique Pralus" },
-            { img: "mondeenjeu.jpg", title: "Le Monde en Jeux" },
-            { img: "bettant.jpg", title: "Boulangerie Bettant" },
-            { img: "carbone.jpg", title: "SCOP Carbone" },
+            { img: "mondeenjeu.webp", title: "Le Monde en Jeux" },
+            { img: "bettant.webp", title: "Boulangerie Bettant" },
+            { img: "carbone.webp", title: "SCOP Carbone" },
             { img: "tramt6verlaine.webp", title: "Accès Tram T6" }
         ]
     },
@@ -55,6 +55,25 @@ export const content = {
             { icon: "⚡", title: "Internet haut débit", desc: "Connexion fibre et copieur pro : discret, mais indispensable pour avancer sereinement." },
             { icon: "✨", title: "Confort & Ménage", desc: "Espaces baignés de lumière, climatisés. Ménage hebdomadaire inclus." }
         ]
+    },
+    meetingRoom: {
+        title: "Louez notre salle de réunion",
+        subtitle: "Ouverte à tous, coworkers ou non",
+        description: "Une salle fermée et lumineuse pour vos comités, ateliers, entretiens ou formations. Jusqu'à 8 personnes autour de la table, à deux pas du métro et du tram, en plein cœur de Gratte-Ciel.",
+        price: "100€",
+        priceUnit: "HT / demi-journée",
+        priceNote: "Matin (9h — 13h) ou après-midi (14h — 18h). Journée complète sur demande.",
+        capacity: "8 personnes",
+        features: [
+            { icon: "👥", label: "Jusqu'à 8 personnes assises" },
+            { icon: "🖥️", label: "Grand écran pour vos présentations" },
+            { icon: "🎥", label: "Équipement audio pour la visioconférence" },
+            { icon: "⚡", label: "Fibre haut débit et prises à chaque place" },
+            { icon: "☕", label: "Café, thé et accès à la cuisine équipée" },
+            { icon: "🤫", label: "Salle fermée et au calme" }
+        ],
+        cta: "Réserver la salle",
+        mainImage: "salle-reunion1.webp"
     },
     pricing: {
         title: "Nos tarifs coworking",
@@ -70,6 +89,40 @@ export const content = {
             highlight: "Chez SCOPA Studio, on préfère en discuter : parlons de votre besoin, et trouvons ensemble la meilleure manière de collaborer.",
             cta: "Discutons-en"
         }
+    },
+    faq: {
+        title: "Questions fréquentes",
+        description: "Tout ce qu'on nous demande avant de venir travailler avec nous.",
+        items: [
+            {
+                q: "Où se situe Scopa Studio ?",
+                a: "Au 41 rue Paul Verlaine, 69100 Villeurbanne, en plein cœur du quartier Gratte-Ciel. Le tram T6 s'arrête à deux pas, et le métro A dessert le quartier."
+            },
+            {
+                q: "Combien coûte la location de la salle de réunion ?",
+                a: "100€ HT la demi-journée, matin (9h — 13h) ou après-midi (14h — 18h). La salle accueille jusqu'à 8 personnes et dispose d'un grand écran ainsi que d'un équipement audio pour la visioconférence. Journée complète sur demande."
+            },
+            {
+                q: "Peut-on louer la salle de réunion sans être coworker ?",
+                a: "Oui. La salle est ouverte à tous, que vous soyez résident de Scopa Studio ou non. Écrivez-nous à studio@scopa.co avec la date et le créneau souhaités."
+            },
+            {
+                q: "Quels sont les tarifs du coworking ?",
+                a: "300€ HT par mois et par poste sans engagement, 250€ HT avec un engagement de 6 mois, et 800€ HT par mois pour le bureau privatif (jusqu'à 4 personnes). Le tarif s'ajuste selon le nombre de postes et la durée d'engagement."
+            },
+            {
+                q: "Y a-t-il un engagement minimum ?",
+                a: "Non. La formule Standard est sans engagement. L'engagement de 6 mois est une option qui donne accès à un tarif préférentiel."
+            },
+            {
+                q: "Qu'est-ce qui est inclus dans l'abonnement ?",
+                a: "L'accès sécurisé 24h/24 et 7j/7, la connexion fibre, la cuisine équipée, le café et le thé à volonté, les salles d'appels isolées, la climatisation et le ménage hebdomadaire."
+            },
+            {
+                q: "Peut-on venir essayer avant de s'engager ?",
+                a: "Bien sûr. Écrivez-nous à studio@scopa.co pour convenir d'une visite ou d'une journée d'essai sur place."
+            }
+        ]
     },
     contact: {
         title: "Nous contacter",

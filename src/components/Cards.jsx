@@ -11,6 +11,8 @@ export function LocationCard({ img, title, className = "" }) {
             <img
                 src={imagePath}
                 alt={title}
+                loading="lazy"
+                decoding="async"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                 onMouseOver={e => e.currentTarget.style.transform = 'scale(1.1)'}
                 onMouseOut={e => e.currentTarget.style.transform = 'scale(1.0)'}

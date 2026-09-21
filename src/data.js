@@ -5,14 +5,14 @@ export const content = {
         subtitle: "Au cœur de Villeurbanne",
         description: "Situé dans le quartier dynamique de Gratte-Ciel, Scopa Studio est l’espace de travail douillet pensé pour le confort et la réussite de ses co-workers.",
         cta: "Voir les disponibilités",
-        image: "open-space-entier1.webp"
+        image: "open-space-2026.webp"
     },
     concept: {
         title: "Le coworking coopératif à Villeurbanne",
         description: "Seul ou en équipe, dans l’espace partagé ou en bureau privé, en passant par la cuisine et la salle de réunion, vous trouverez tout ce dont vous avez besoin pour travailler efficacement dans une ambiance conviviale.",
         highlight: "Au total, ce sont **8 postes de travail coworking** qui sont disponibles.",
-        images: ["bureau-privatif2.webp", "open-space-gauche3.webp", "open-space-gauche2.webp"],
-        mainImage: "open-space-gauche1.webp"
+        images: ["balcon.webp", "cuisine.webp", "cafe.webp", "plante-deco.webp"],
+        mainImage: "open-space-2026.webp"
     },
     reviews: {
         title: "Ce qu'en disent nos coworkers",
@@ -73,7 +73,7 @@ export const content = {
             { icon: "🤫", label: "Salle fermée et au calme" }
         ],
         cta: "Réserver la salle",
-        mainImage: "salle-reunion1.webp"
+        mainImage: "salle-reunion2.webp"
     },
     pricing: {
         title: "Nos tarifs coworking",

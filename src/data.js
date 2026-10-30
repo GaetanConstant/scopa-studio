@@ -12,6 +12,12 @@ export const content = {
         description: "Seul ou en équipe, dans l’espace partagé ou en bureau privé, en passant par la cuisine et la salle de réunion, vous trouverez tout ce dont vous avez besoin pour travailler efficacement dans une ambiance conviviale.",
         highlight: "Au total, ce sont **8 postes de travail coworking** qui sont disponibles.",
         images: ["balcon.webp", "cuisine.webp", "cafe.webp", "plante-deco.webp"],
+        imageAlts: [
+            "Balcon du coworking Scopa Studio à Villeurbanne",
+            "Cuisine équipée partagée par les coworkers",
+            "Coin café du coworking, café et thé à volonté",
+            "Plantes et décoration de l'espace de travail"
+        ],
         mainImage: "open-space-2026.webp"
     },
     reviews: {
@@ -120,6 +126,10 @@ export const content = {
                 a: "L'accès sécurisé 24h/24 et 7j/7, la connexion fibre, la cuisine équipée, le café et le thé à volonté, les salles d'appels isolées, la climatisation et le ménage hebdomadaire."
             },
             {
+                q: "Peut-on louer un poste à la journée ?",
+                a: "Oui, sur demande et selon les disponibilités. Appelez-nous au 06 98 21 09 27 ou écrivez à studio@scopa.co avec la date souhaitée."
+            },
+            {
                 q: "Peut-on venir essayer avant de s'engager ?",
                 a: "Bien sûr. Écrivez-nous à studio@scopa.co pour convenir d'une visite ou d'une journée d'essai sur place."
             }
@@ -129,8 +139,155 @@ export const content = {
         title: "Nous contacter",
         address: ["41 rue Paul Verlaine,", "69100 Villeurbanne"],
         email: "studio@scopa.co",
+        phone: "06 98 21 09 27",
+        phoneHref: "tel:+33698210927",
         design: "SCOPA",
         linkedin: "https://www.linkedin.com/company/scopa-studio/",
         website: "https://scopa.co/"
+    }
+};
+
+// Pages d'offre : une page par recherche visée (bureau privatif, salle de
+// réunion, coworking près de Lyon). Chaque entrée a son HTML dans
+// <slug>/index.html, prérendu au build par scripts/prerender.mjs.
+export const offers = {
+    "bureau-privatif": {
+        path: "/bureau-privatif-villeurbanne/",
+        navLabel: "Bureau privatif",
+        eyebrow: "Villeurbanne · Gratte-Ciel",
+        title: "Bureau privatif à louer à Villeurbanne",
+        intro: "Un bureau fermé rien que pour votre équipe, jusqu'à 4 personnes, au cœur de Gratte-Ciel. Vous gardez votre porte, et vous profitez de tous les services du coworking : cuisine, salle de réunion, café, fibre.",
+        image: { src: "balcon.webp", alt: "Balcon lumineux de Scopa Studio, bureaux à Villeurbanne Gratte-Ciel" },
+        price: { amount: "800€", unit: "HT / mois", note: "Jusqu'à 4 personnes. Le tarif s'ajuste selon la durée d'engagement : parlons-en." },
+        features: [
+            { icon: "🚪", label: "Bureau fermé, jusqu'à 4 postes" },
+            { icon: "🔐", label: "Accès sécurisé 24h/24, 7j/7" },
+            { icon: "⚡", label: "Fibre haut débit et copieur pro" },
+            { icon: "🤝", label: "Salle de réunion et salles d'appels" },
+            { icon: "☕", label: "Cuisine équipée, café et thé à volonté" },
+            { icon: "✨", label: "Climatisation et ménage hebdomadaire" }
+        ],
+        sections: [
+            {
+                title: "Pour qui ?",
+                paragraphs: [
+                    "Le bureau privatif s'adresse aux jeunes structures, aux petites équipes de 2 à 4 personnes et aux indépendants qui ont besoin de confidentialité : appels clients, rendez-vous, documents sensibles.",
+                    "Vous travaillez au calme dans votre espace, tout en partageant la cuisine et les pauses avec la communauté du coworking."
+                ]
+            },
+            {
+                title: "Tout est inclus",
+                paragraphs: [
+                    "Pas de frais cachés ni de contrat d'énergie à gérer : le loyer couvre l'accès 24h/24, la fibre, la climatisation, le ménage, le café et l'accès aux espaces communs. Vous posez vos ordinateurs, vous travaillez."
+                ]
+            },
+            {
+                title: "Un emplacement central",
+                paragraphs: [
+                    "Scopa Studio se trouve au 41 rue Paul Verlaine, dans le quartier Gratte-Ciel, desservi par le métro A et le tram T6. Commerces, cafés et restaurants sont à quelques pas."
+                ]
+            }
+        ],
+        faq: [
+            { q: "Combien coûte le bureau privatif ?", a: "800€ HT par mois pour un bureau fermé jusqu'à 4 personnes, services inclus. Le tarif s'ajuste selon la durée d'engagement." },
+            { q: "Combien de personnes peuvent y travailler ?", a: "Jusqu'à 4 personnes, avec un poste de travail chacune." },
+            { q: "Peut-on visiter avant de s'installer ?", a: "Oui. Appelez-nous au 06 98 21 09 27 ou écrivez à studio@scopa.co pour convenir d'une visite." },
+            { q: "Quelle différence avec un poste en coworking ?", a: "En coworking, vous travaillez dans l'espace partagé (300€ HT par mois et par poste sans engagement). Le bureau privatif vous donne une pièce fermée réservée à votre équipe, avec les mêmes services." }
+        ],
+        cta: { label: "Demander une visite", subject: "Bureau privatif - demande de visite" },
+        schema: { name: "Location de bureau privatif", price: "800", unitText: "mois" }
+    },
+    "salle-reunion": {
+        path: "/salle-de-reunion-villeurbanne/",
+        navLabel: "Salle de réunion",
+        eyebrow: "Ouverte à tous, coworkers ou non",
+        title: "Location de salle de réunion à Villeurbanne",
+        intro: "Une salle fermée et lumineuse pour 8 personnes au cœur de Gratte-Ciel : grand écran, équipement de visioconférence, fibre. 100€ HT la demi-journée, café compris.",
+        image: { src: "salle-reunion2.webp", alt: "Salle de réunion 8 personnes avec grand écran, Scopa Studio Villeurbanne" },
+        price: { amount: "100€", unit: "HT / demi-journée", note: "Matin (9h — 13h) ou après-midi (14h — 18h). Journée complète sur demande." },
+        features: [
+            { icon: "👥", label: "Jusqu'à 8 personnes assises" },
+            { icon: "🖥️", label: "Grand écran pour vos présentations" },
+            { icon: "🎥", label: "Équipement audio pour la visioconférence" },
+            { icon: "⚡", label: "Fibre haut débit et prises à chaque place" },
+            { icon: "☕", label: "Café, thé et accès à la cuisine équipée" },
+            { icon: "🤫", label: "Salle fermée et au calme" }
+        ],
+        sections: [
+            {
+                title: "Pour vos réunions, ateliers et formations",
+                paragraphs: [
+                    "Comité de direction, séminaire d'équipe, atelier client, entretien d'embauche, session de formation : la salle accueille jusqu'à 8 personnes autour d'une même table.",
+                    "Le grand écran et l'équipement audio permettent d'associer des participants à distance sans bricoler."
+                ]
+            },
+            {
+                title: "Facile d'accès depuis Lyon",
+                paragraphs: [
+                    "La salle est au 41 rue Paul Verlaine, à Villeurbanne Gratte-Ciel. Le métro A (station Gratte-Ciel) relie directement Charpennes, Hôtel de Ville et Bellecour, et le tram T6 passe à deux pas.",
+                    "Vos invités trouvent sur place cafés, restaurants et boulangeries pour les pauses."
+                ]
+            },
+            {
+                title: "Réserver en deux minutes",
+                paragraphs: [
+                    "Envoyez-nous la date, le créneau et le nombre de participants par email ou par téléphone : nous confirmons la disponibilité rapidement. Pas besoin d'être coworker."
+                ]
+            }
+        ],
+        faq: [
+            { q: "Combien coûte la location de la salle de réunion ?", a: "100€ HT la demi-journée, matin (9h — 13h) ou après-midi (14h — 18h). Journée complète sur demande." },
+            { q: "Peut-on louer la salle sans être coworker ?", a: "Oui, la salle est ouverte à tous. Écrivez-nous à studio@scopa.co ou appelez le 06 98 21 09 27." },
+            { q: "Combien de personnes la salle accueille-t-elle ?", a: "Jusqu'à 8 personnes assises autour de la table." },
+            { q: "Peut-on organiser une visioconférence ?", a: "Oui : la salle dispose d'un grand écran et d'un équipement audio adapté à la visio, ainsi que de la fibre." },
+            { q: "Le café est-il compris ?", a: "Oui, café et thé sont à disposition, ainsi que la cuisine équipée." }
+        ],
+        cta: { label: "Réserver la salle", subject: "Réservation salle de réunion - Scopa Studio" },
+        schema: { name: "Location de salle de réunion", price: "100", unitText: "demi-journée" }
+    },
+    "coworking-lyon": {
+        path: "/coworking-lyon/",
+        navLabel: "Coworking près de Lyon",
+        eyebrow: "Aux portes de Lyon 6e et Lyon 3e",
+        title: "Un coworking aux portes de Lyon, à Gratte-Ciel",
+        intro: "Vous cherchez un coworking à Lyon sans les prix ni l'agitation de la Presqu'île ? Scopa Studio est à Villeurbanne Gratte-Ciel, à quelques stations de métro du centre, dans un quartier vivant et commerçant.",
+        image: { src: "gratteciel.webp", alt: "Quartier Gratte-Ciel à Villeurbanne, à proximité immédiate de Lyon" },
+        price: { amount: "300€", unit: "HT / mois / poste", note: "Sans engagement, ou 250€ HT avec un engagement de 6 mois. Poste à la journée sur demande." },
+        features: [
+            { icon: "🚇", label: "Métro A, station Gratte-Ciel" },
+            { icon: "🚋", label: "Tram T6 à deux pas" },
+            { icon: "🪑", label: "8 postes de travail en open space" },
+            { icon: "🚪", label: "Bureau privatif jusqu'à 4 personnes" },
+            { icon: "🤝", label: "Salle de réunion 8 personnes" },
+            { icon: "⭐", label: "Noté 5,0 sur Google" }
+        ],
+        sections: [
+            {
+                title: "Venir depuis Lyon",
+                paragraphs: [
+                    "Villeurbanne touche Lyon 6e et Lyon 3e. Depuis la Presqu'île, le métro A mène directement à Gratte-Ciel, sans correspondance, depuis Bellecour, Cordeliers ou Hôtel de Ville. Depuis la Part-Dieu, une correspondance à Charpennes suffit."
+                ]
+            },
+            {
+                title: "Un coworking à taille humaine",
+                paragraphs: [
+                    "Avec 8 postes en open space et un bureau privatif, Scopa Studio n'est pas une usine à bureaux : on se connaît et on partage les pauses à la cuisine.",
+                    "Les coworkers en parlent mieux que nous : la note est de 5,0 sur Google."
+                ]
+            },
+            {
+                title: "Gratte-Ciel, un quartier pour travailler et vivre",
+                paragraphs: [
+                    "Le Théâtre National Populaire, l'avenue Henri-Barbusse, ses commerces, cafés et boulangeries : tout est à pied. Un cadre agréable pour vos journées de travail comme pour recevoir vos clients."
+                ]
+            }
+        ],
+        faq: [
+            { q: "Le coworking est-il à Lyon ou à Villeurbanne ?", a: "À Villeurbanne, au 41 rue Paul Verlaine, quartier Gratte-Ciel. Villeurbanne est limitrophe de Lyon 6e et 3e, et le métro A relie directement le centre de Lyon." },
+            { q: "Quels sont les tarifs ?", a: "300€ HT par mois et par poste sans engagement, 250€ HT avec un engagement de 6 mois, 800€ HT par mois pour le bureau privatif jusqu'à 4 personnes." },
+            { q: "Peut-on travailler à la journée ?", a: "Oui, sur demande et selon les disponibilités. Appelez le 06 98 21 09 27 ou écrivez à studio@scopa.co." }
+        ],
+        cta: { label: "Venir visiter", subject: "Coworking - demande de visite" },
+        schema: { name: "Poste de coworking", price: "300", unitText: "mois" }
     }
 };

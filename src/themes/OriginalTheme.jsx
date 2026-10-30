@@ -1,33 +1,21 @@
 
 import React, { useState } from 'react';
-import { content } from '../data';
+import { content, offers } from '../data';
 import { LocationCard, ServiceCard, PricingCard, ReviewCard } from '../components/Cards';
+import { SiteNav, SiteFooter, Faq } from '../components/Layout';
 
 export default function OriginalTheme() {
     const { hero, concept, reviews, location, services, meetingRoom, pricing, faq, contact } = content;
     const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
-    // State for Lightbox and Legal Modal
     const [lightboxImg, setLightboxImg] = useState(null);
-    const [showLegal, setShowLegal] = useState(false);
 
     const openLightbox = (img) => setLightboxImg(img);
     const closeLightbox = () => setLightboxImg(null);
 
     return (
         <div className="theme-original">
-            {/* Navigation */}
-            <nav className="site-nav">
-                <div className="site-nav__brand">SCOPA STUDIO</div>
-                <div className="site-nav__links">
-                    <a href="#concept">Le Concept</a>
-                    <a href="#services">Services</a>
-                    <a href="#tarifs">Tarifs</a>
-                    <a href="#salle-reunion">Salle de réunion</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact" className="btn btn-primary">Contact</a>
-                </div>
-            </nav>
+            <SiteNav />
 
             {/* Hero Section */}
             <header className="hero section" style={{
@@ -63,7 +51,7 @@ export default function OriginalTheme() {
                                     <img
                                         key={i}
                                         src={`${base}images/${img}`}
-                                        alt={`Espace coworking Scopa Studio - vue ${i + 1}`}
+                                        alt={concept.imageAlts[i]}
                                         loading="lazy"
                                         decoding="async"
                                         style={{ width: '150px', height: '100px', objectFit: 'cover', borderRadius: '8px', cursor: 'pointer' }}
@@ -75,7 +63,7 @@ export default function OriginalTheme() {
                         <div>
                             <img
                                 src={`${base}images/${concept.mainImage}`}
-                                alt="Espace principal coworking Villeurbanne"
+                                alt="Open space du coworking Scopa Studio à Villeurbanne Gratte-Ciel"
                                 loading="lazy"
                                 decoding="async"
                                 style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '24px', boxShadow: 'var(--shadow-md)', cursor: 'pointer' }}
@@ -174,6 +162,10 @@ export default function OriginalTheme() {
                             dangerouslySetInnerHTML={{ __html: pricing.note.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
                         />
                         <p style={{ marginBottom: '2rem' }}>{pricing.note.highlight}</p>
+                        <p style={{ marginBottom: '2rem' }}>
+                            Une équipe de 2 à 4 personnes ?{' '}
+                            <a href={offers["bureau-privatif"].path} style={{ textDecoration: 'underline' }}>Découvrez le bureau privatif</a>.
+                        </p>
                         <a href={`mailto:${contact.email}`} className="btn btn-primary">{pricing.note.cta}</a>
                     </div>
                 </div>
@@ -222,56 +214,19 @@ export default function OriginalTheme() {
                             >
                                 {meetingRoom.cta}
                             </a>
+                            <p style={{ marginTop: '1rem' }}>
+                                <a href={offers["salle-reunion"].path} style={{ textDecoration: 'underline' }}>
+                                    Tout savoir sur la location de la salle de réunion
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* FAQ Section */}
-            <section id="faq" className="section faq">
-                <div className="container">
-                    <div className="text-center" style={{ marginBottom: '3rem' }}>
-                        <h2 className="heading-2">{faq.title}</h2>
-                        <p>{faq.description}</p>
-                    </div>
+            <Faq {...faq} />
 
-                    <div className="faq__list">
-                        {faq.items.map((item, i) => (
-                            <details key={i} className="faq__item">
-                                <summary className="faq__question">{item.q}</summary>
-                                <p className="faq__answer">{item.a}</p>
-                            </details>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Footer / Contact */}
-            <footer id="contact" className="section site-footer" style={{ background: 'var(--color-secondary)', color: 'white', padding: '1.5rem 0' }}>
-                <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-                        <p style={{ margin: 0, fontSize: '1rem' }}>
-                            {contact.address[0]} {contact.address[1]}
-                        </p>
-                        <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: 'white', display: 'flex', alignItems: 'center' }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                        <a href={contact.website} target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.7, textDecoration: 'none', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-                            Designed by {contact.design}
-                        </a>
-                        <button
-                            onClick={() => setShowLegal(true)}
-                            style={{ background: 'none', border: 'none', color: 'white', opacity: 0.5, cursor: 'pointer', fontSize: '0.8rem', textDecoration: 'underline' }}
-                        >
-                            Mentions Légales
-                        </button>
-                    </div>
-                </div>
-            </footer>
+            <SiteFooter />
 
             {/* Lightbox Modal */}
             {lightboxImg && (
@@ -287,34 +242,6 @@ export default function OriginalTheme() {
                 </div>
             )}
 
-            {/* Mentions Légales Modal */}
-            {showLegal && (
-                <div
-                    style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', zIndex: 10000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-                    onClick={() => setShowLegal(false)}
-                >
-                    <div
-                        style={{ background: 'white', padding: '2rem', borderRadius: '8px', maxWidth: '600px', width: '90%', maxHeight: '80vh', overflowY: 'auto' }}
-                        onClick={e => e.stopPropagation()}
-                    >
-                        <h2 style={{ marginBottom: '1rem' }}>Mentions Légales</h2>
-                        <p><strong>Éditeur du site :</strong> Scopa Studio</p>
-                        <p><strong>Adresse :</strong> 41 rue Paul Verlaine, 69100 Villeurbanne</p>
-                        <p><strong>Contact :</strong> contact@scopa-studio.fr</p>
-                        <p><strong>Hébergement :</strong> Ce site est hébergé via Vercel.</p>
-                        <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666' }}>
-                            Les informations recueillies font l’objet d’un traitement informatique destiné à la gestion de la clientèle.
-                            Conformément à la loi « informatique et libertés », vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent.
-                        </p>
-                        <button
-                            onClick={() => setShowLegal(false)}
-                            style={{ marginTop: '2rem', padding: '0.5rem 1rem', background: 'var(--color-primary)', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
-                        >
-                            Fermer
-                        </button>
-                    </div>
-                </div>
-            )}
         </div>
     );
 }

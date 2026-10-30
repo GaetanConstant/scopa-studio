@@ -495,3 +495,24 @@ img {
   padding-bottom: 1.25rem;
   padding-right: 2rem;
 }
+
+/* Pages d'offre (bureau privatif, salle de réunion, coworking près de Lyon) */
+.offer-hero {
+  background: linear-gradient(135deg, #fdfbf7 0%, #fff0eb 100%);
+}
+
+.offer-hero .grid-2>* {
+  min-width: 0;
+}
+
+.offer-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+}
+
+.offer-body {
+  max-width: 760px;
+}

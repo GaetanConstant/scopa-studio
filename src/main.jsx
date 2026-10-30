@@ -5,9 +5,10 @@ import App from './App.jsx'
 
 const container = document.getElementById('root')
 
+// data-page désigne la page d'offre servie par ce HTML ; absent sur l'accueil
 const app = (
   <StrictMode>
-    <App />
+    <App page={container.dataset.page} />
   </StrictMode>
 )
 

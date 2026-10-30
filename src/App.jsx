@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import OriginalTheme from './themes/OriginalTheme';
 import MinimalTheme from './themes/MinimalTheme';
 import CreativeTheme from './themes/CreativeTheme';
+import OfferPage from './components/OfferPage';
+import { offers } from './data';
 
 // Landing Page for Theme Selection
 function ThemeSelector({ onSelect }) {
@@ -42,9 +44,12 @@ function ThemeSelector({ onSelect }) {
   );
 }
 
-function App() {
+function App({ page }) {
   // Default to 'original' effectively disabling the switcher for the user
   const [currentTheme, setCurrentTheme] = useState('original');
+
+  // Pages d'offre : une page HTML par offre, identifiée par data-page sur #root
+  if (page && offers[page]) return <OfferPage page={page} />;
 
   const renderTheme = () => {
     switch (currentTheme) {

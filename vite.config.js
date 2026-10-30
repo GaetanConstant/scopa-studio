@@ -8,12 +8,16 @@ export default defineConfig({
   base: '/',
   build: {
     rollupOptions: {
-      // Deux pages independantes : le site vitrine a la racine, et l'intranet
+      // Pages independantes : le site vitrine a la racine, les pages d'offre, et l'intranet
       // locataires. Vite ecrit intranet/index.html, que GitHub Pages sert
       // directement sur /intranet — pas besoin de routeur ni de 404.html.
       input: {
         main: resolve(__dirname, 'index.html'),
         intranet: resolve(__dirname, 'intranet/index.html'),
+        // Pages d'offre, prérendues par scripts/prerender.mjs
+        'bureau-privatif': resolve(__dirname, 'bureau-privatif-villeurbanne/index.html'),
+        'salle-reunion': resolve(__dirname, 'salle-de-reunion-villeurbanne/index.html'),
+        'coworking-lyon': resolve(__dirname, 'coworking-lyon/index.html'),
       },
     },
   },

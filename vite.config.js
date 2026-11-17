@@ -18,6 +18,9 @@ export default defineConfig({
         'bureau-privatif': resolve(__dirname, 'bureau-privatif-villeurbanne/index.html'),
         'salle-reunion': resolve(__dirname, 'salle-de-reunion-villeurbanne/index.html'),
         'coworking-lyon': resolve(__dirname, 'coworking-lyon/index.html'),
+        // Articles (src/articles.js), prérendus eux aussi
+        articles: resolve(__dirname, 'articles/index.html'),
+        'article-appartement-trop-petit': resolve(__dirname, 'articles/teletravail-appartement-trop-petit/index.html'),
       },
     },
   },

@@ -23,6 +23,11 @@ npm run preview  # prévisualise le build
 Textes, tarifs, services et lieux du quartier : `src/data.js`.
 Photos : `public/images/` (référencées par leur nom de fichier dans `data.js`).
 
+Articles (`/articles/`) : `src/articles.js`, un article par entrée, signé et daté.
+Pour en ajouter un : son entrée dans `articles.js`, son `index.html` (copier celui
+d'un article existant), puis son entrée dans `vite.config.js`,
+`scripts/prerender.mjs` et `public/sitemap.xml`.
+
 ## Déploiement
 
 Automatique via GitHub Actions ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml))

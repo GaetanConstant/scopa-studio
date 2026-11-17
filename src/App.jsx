@@ -3,7 +3,9 @@ import OriginalTheme from './themes/OriginalTheme';
 import MinimalTheme from './themes/MinimalTheme';
 import CreativeTheme from './themes/CreativeTheme';
 import OfferPage from './components/OfferPage';
+import ArticlePage, { ArticlesIndex } from './components/ArticlePage';
 import { offers } from './data';
+import { articles } from './articles';
 
 // Landing Page for Theme Selection
 function ThemeSelector({ onSelect }) {
@@ -50,6 +52,9 @@ function App({ page }) {
 
   // Pages d'offre : une page HTML par offre, identifiée par data-page sur #root
   if (page && offers[page]) return <OfferPage page={page} />;
+  // Articles : la rubrique, puis une page HTML par article
+  if (page === 'articles') return <ArticlesIndex />;
+  if (page && articles[page]) return <ArticlePage page={page} />;
 
   const renderTheme = () => {
     switch (currentTheme) {

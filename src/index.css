@@ -516,3 +516,39 @@ img {
 .offer-body {
   max-width: 760px;
 }
+
+/* Articles (rubrique /articles/) : mêmes gabarits que les pages d'offre */
+.article-meta {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.article-bref {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-hover);
+}
+
+.article-bref ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.article-bref li + li {
+  margin-top: 0.4rem;
+}
+
+.article-section {
+  margin-bottom: 2.5rem;
+}
+
+.article-section p {
+  margin-bottom: 1rem;
+}
+
+.article-section h2 a,
+.offer-eyebrow a {
+  color: inherit;
+}

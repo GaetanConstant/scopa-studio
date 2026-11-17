@@ -78,6 +78,9 @@ export function SiteFooter() {
                         <a href={offers["coworking-lyon"].path} style={{ color: 'white', opacity: 0.7, fontSize: '0.9rem' }}>
                             {offers["coworking-lyon"].navLabel}
                         </a>
+                        <a href="/articles/" style={{ color: 'white', opacity: 0.7, fontSize: '0.9rem' }}>
+                            Articles
+                        </a>
                         <a href={contact.website} target="_blank" rel="noopener noreferrer" style={{ color: 'white', opacity: 0.7, textDecoration: 'none', fontSize: '0.9rem' }}>
                             Designed by {contact.design}
                         </a>

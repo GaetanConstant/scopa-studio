@@ -14,6 +14,7 @@ const pages = [
     { file: 'coworking-lyon/index.html', page: 'coworking-lyon' },
     { file: 'articles/index.html', page: 'articles' },
     { file: 'articles/teletravail-appartement-trop-petit/index.html', page: 'article-appartement-trop-petit' },
+    { file: 'articles/coworking-cooperatif/index.html', page: 'article-coworking-cooperatif' },
 ]
 
 const { render } = await import(resolve(ssrDir, 'entry-server.js'))

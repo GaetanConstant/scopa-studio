@@ -21,6 +21,7 @@ export default defineConfig({
         // Articles (src/articles.js), prérendus eux aussi
         articles: resolve(__dirname, 'articles/index.html'),
         'article-appartement-trop-petit': resolve(__dirname, 'articles/teletravail-appartement-trop-petit/index.html'),
+        'article-coworking-cooperatif': resolve(__dirname, 'articles/coworking-cooperatif/index.html'),
       },
     },
   },
